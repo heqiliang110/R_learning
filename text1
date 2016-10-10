@@ -1,9 +1,0 @@
-##character string
-> str_var[1]
-[1] "Some string"
-> str_var[2]
-[1] NA
->
-> length(str_var) # length of vector
-[1] 1
-> nchar
