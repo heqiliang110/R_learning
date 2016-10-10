@@ -1,0 +1,55 @@
+################################################  vextor create  ##########################################################
+seq(from=0, to=1, len=11) # decimals from 0 to 1.0
+[1] 0.0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0
+> seq(from=0, to=1, by=0.1) # decimals from 0 to 1.0
+[1] 0.0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0
+> seq(-2,2, len=11) # 10 numbers from -2 to 2
+[1] -2.0 -1.6 -1.2 -0.8 -0.4 0.0 0.4 0.8 1.2 1.6 2.0
+> rep(100, times=5) # replicate a number
+[1] 100 100 100 100 100
+> character(5) # create empty character vector
+[1] "" "" "" "" ""
+> numeric(5) # create empty numeric vector
+[1] 0 0 0 0 0
+> numeric(0) 
+##############################################      vextor names    #####################################################
+names(vec_tor) <- c("pie","eulery","gammy")
+structure(sample(1:5), names=paste0("el", 1:5))
+el1 el2 el3 el4 el5
+4 2 3 1 5
+###############################################     vextor extract   ######################################################
+extract second and third elements
+> vec_tor[c(FALSE, TRUE, TRUE)]
+# extract elements using their names
+> vec_tor["eulery"]
+# extract all elements equal to
+
+#################################################
+[1] 1 4
+###############################################   FACTOR########################################################
+fac_tor <- factor(c('b', 'c', 'd', 'a', 'c', 'b'))
+fac_tor
+fac_tor[3]
+attributes(fac_tor)  # get factor attributes
+levels(fac_tor)  # get allowed values
+as.numeric(fac_tor)  # get encoding vector
+is.vector(fac_tor)
+as.factor(1:5)  # coerce vector to factor
+# coerce factor to character vector
+as.vector(as.factor(1:5))
+fac_tor
+levels(fac_tor)  # get allowed values
+unique(fac_tor)  # get unique elements
+# get contingency (frequency) table
+table(fac_tor)
+################################################################   CATEGORIES #############################3
+brea_ks <- c("freezing"=0, "very_cold"=30,
+       "cold"=50, "pleasant"=60,
+       "warm"=80, "hot"=90)
+brea_ks
+tempe_ratures <- runif(10, min=10, max=100)
+feels_like <- names(
+  brea_ks[findInterval(x=tempe_ratures,
+                 vec=brea_ks)])
+names(tempe_ratures) <- feels_like
+tempe_ratures
